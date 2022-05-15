@@ -1,0 +1,16 @@
+docker run image command-to-be-run
+docker create image #returns container-id
+docker start container-id
+docker ps
+docker ps -a
+docker logs container-id
+docker system prune
+docker stop container-id
+docker kill container-id
+
+#run additional command in existing container
+docker exec -it container-id command
+
+#shell access to running container
+docker exec -it container-id sh
+
