@@ -1,2 +1,6 @@
 localectl
 timedatectl
+
+Shortcuts:
+Command input: Alt + F2 
+Activities Tab: Windows key 
