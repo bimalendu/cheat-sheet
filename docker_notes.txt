@@ -14,3 +14,6 @@ docker exec -it container-id command
 #shell access to running container
 docker exec -it container-id sh
 
+Dockerfile
+docker build .
+
