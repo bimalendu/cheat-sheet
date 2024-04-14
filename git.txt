@@ -1,0 +1,53 @@
+git:
+git ls-files #see files in staging area
+git add
+git rm
+
+Undo changes to unstaged file:
+-----------------------------
+git checkout file-name
+git checkout .
+	or
+git restore file-name
+git restore .
+
+Undo created unstaged file:
+--------------------------
+
+git clean -dn
+git clean -df
+
+Undo staged file changes:
+-------------------
+git reset file-name
+git checkout file-name
+	or 
+git restore --staged file-name
+git checkout file-name
+
+DELETE Commits
+--------------
+git reset --soft HEAD~1
+
+git reset HEAD~1
+
+git reset --hard HEAD~1
+		     ~2
+		     ~3
+
+Delete branch
+-------------
+git branch -d branch-name #delete branch if it is merged
+git branch -D branch-name #delete branch whether it is merged or not
+
+Stash
+-----
+git stash
+git stash push -m "message in stash"
+
+git stash apply #apply recently stashed changes
+
+git stash list
+
+
+

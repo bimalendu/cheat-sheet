@@ -7,6 +7,10 @@ docker logs container-id
 docker system prune
 docker stop container-id
 docker kill container-id
+docker rm container-id
+
+docker inspect
+docker stats
 
 #run additional command in existing container
 docker exec -it container-id command
@@ -16,4 +20,65 @@ docker exec -it container-id sh
 
 Dockerfile
 docker build .
+docker build -t 666999bimal/ddl-frontend .
 
+docker run -p 80:80 666999bimal/ddl-frontend
+
+Remove image
+docker rmi image_name:tag
+
+docker rm -f container
+
+
+Limit docker container by memory and cpu
+docker run -d --name nginx3 --memory "300mb" --cpuset-cpus 0-3 nginx:alpine
+							   0,3	
+
+
+Copy files from container to host
+docker cp apache2:test.txt .
+
+Create image out of a containers current state
+docker commit container-id final-image:tag
+
+Run and remove image after exit
+docker run --rm -ti centos bash
+
+docker volume create mysql_volume
+docker volume ls
+
+docker run -d -v mysql_volume:/var/lib/mysql --name mysql -e "MYSQL_ROOT_PASSWORD=12345678" mysql:5.7
+
+docker volume rm container-id
+
+docker network inspect <network-name>
+
+docker network create -d bridge --subnet 172.18.0.0/16 --gatewat 172.18.0.1 new_network
+
+docker network ls
+docker network inspect new_network
+docker network rm new_network
+
+docker run -dti --network new_network --name container3 centos
+
+Remove all containers
+---------------------
+docker rm -fv $(docker ps -aq)
+
+docker exec container1 bash -c "ping container2"
+
+Connect a container to a network
+--------------------------------
+docker network connect net1 net2_cont
+
+Disconnect a container to a network
+--------------------------------
+docker network disconnect net1 net2_cont
+
+network = host
+then
+	share host properties with network
+
+network = none
+then
+	no network is none network

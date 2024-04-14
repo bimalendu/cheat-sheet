@@ -1,0 +1,8 @@
+■ Get-ChildItem (for Dir, Ls)
+■ Set-Location (for Cd)
+■ Move-Item (for Move)
+■ Rename-Item (for Ren)
+■ Remove-Item (for Del, Rm, RmDir)
+■ Copy-Item (for Copy, Cp)
+■ Get-Content (for Type, Cat)
+■ New-Item (for MkDir)
